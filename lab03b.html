@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab03b</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <!-- JQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- JavaScript Library -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <style>
+        /* format and fonts setting */
+        
+        .format {
+            padding: 35px;
+            margin: 0;
+            background-color: antiquewhite;
+            width: 100%;
+        }
+
+        .p {
+
+            font-size: 20px;
+        }
+
+        .h1 {
+            text-align: center;
+            font-size: 60px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: auto auto auto auto;
+            gap: 10px;
+            background-color: #89bae3;
+            padding: 10px;
+        }
+
+        .grid-container>div {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 1px solid black;
+            text-align: center;
+            font-size: 20px;
+        }
+
+        /* narbar */
+        .narbar {
+            position: absolute;
+            width: 50%;
+            padding: 1%;
+            margin: 1%;
+            display: flex;
+            justify-content: space-evenly;
+            color: rgb(247, 244, 241);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .image {
+
+            width: 40%;
+            height: auto;
+        }
+
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+                /* MEDIA QUERIES */
+
+        /* Smart phones */
+        @media screen and (max-width: 768px) {
+            .h1 {
+                color: rgb(155, 200, 87);
+                font-size: 100%;
+
+            }
+
+            .p {
+                font-size: 80%;
+            }
+
+            .format {
+                background-color: aquamarine;
+                width: 73%;
+                padding: 13.5%;
+            }
+
+            h2 {
+                font-size: 100%;
+            }
+
+            .narbar {
+
+                font-size: 70%;
+                padding: 4%;
+                display: flex;
+                color: rgb(131, 75, 19);
+                justify-content: space-evenly;
+            }
+
+            .image {
+
+                width: 100%;
+                height: auto;
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                gap: 10px;
+                background-color: #264256;
+                padding: 2%;
+            }
+
+            .grid-container>div {
+                background-color: rgba(155, 196, 93, 0.8);
+                border: 1px solid rgb(163, 224, 181);
+                text-align: center;
+                font-size: 50%;
+            }
+        }
+
+
+        /* Tablets */
+        @media screen and (min-width: 768px) and (max-width: 992px) {
+            .h1 {
+                color: rgb(238, 118, 32);
+                font-size: 140%;
+
+            }
+
+            .p {
+                font-size: 100%;
+            }
+
+            .format {
+                background-color: rgb(123, 224, 152);
+                width: 73%;
+                padding: 13.5%;
+                margin: auto
+            }
+
+            h2 {
+                font-size: 100%;
+            }
+
+            .narbar {
+
+                font-size: 90%;
+                padding: 4%;
+                display: flex;
+                color: rgb(131, 75, 19);
+                justify-content: space-evenly;
+            }
+
+            .image {
+
+                width: 100%;
+                height: auto;
+            }
+
+            .grid-container {
+                display: grid;
+                grid-template-columns: auto auto auto auto;
+                gap: 10px;
+                background-color: #90969a;
+                padding: 2%;
+            }
+
+            .grid-container>div {
+                background-color: rgba(165, 248, 56, 0.8);
+                border: 1px solid rgb(56, 185, 97);
+                text-align: center;
+                font-size: 100%;
+            }
+        }
+
+
+
+
+        /* Desktop */
+        @media screen and (min-width: 992px) {
+            h1 {
+                color: black;
+            }
+
+            .format {
+                background-color: rgb(159, 240, 213);
+                width: 100%;
+                padding: 20px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+
+    <!--navbar-->
+
+
+
+
+    <div class="container">
+        
+        <nav>
+            <div class="btn-group">
+                <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown">
+                    Menu <span class="caret"></span></button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About bullDog</a></li>
+                    <li><a href="#">Infomation</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </div>
+            
+        </nav>
+
+        <div>
+            <h1 class="h1">
+                Otto: Longest human tunnel travelled through by a skateboarding dog
+            </h1>
+        </div>
+        <div>
+            <p class="p">
+                This bulldog in Peru broke the World Record for skateboarding through a human tunnel,
+                by passing under the legs of 30 people who hopefully did not bring up this experience on first dates.
+            </p>
+        </div>
+
+        <div>
+            <img src="https://www.guinnessworldrecords.com/Images/Otto-skateboarding-bulldog_tcm25-475862.jpg"
+                alt="otto's picture" class="image">
+        </div>
+        <div>
+            <p class="p">As required by Guinness World Records, each person creating the tunnel stood facing the same
+                direction and with their feet apart to allow the talented English Bulldog to pass freely underneath
+                without being led or touched in any way.</p>
+            <p class="p">In his home town of Lima, Peru, Otto glided through the legs of 30 people, setting a record for
+                the&nbsp;<strong>longest human tunnel travelled through by a skateboarding dog</strong>, gliding through
+                the legs of 30 people.</p>
+            <p class="p">A huge crowd gathered to watch and the three-year-old dog became an instant celebrity, as
+                videos of the achievement were viewed by millions of people and news outlets all over the world.</p>
+
+        </div>
+
+        <div>
+            <h2>Inspiration</h2>
+            <p class="p">Otto’s journey first began when his owners-to-be Luciana Viale and Robert Rickards saw the
+                renowned videos of Tillman, the <a
+                    href="/news/2015/10/tillman-the-fastest-dog-on-a-skateboard-has-died-404387">former fastest dog on a
+                    skateboard</a>
+                who sadly passed away in 2015.</p>
+            <p class="p">They saw Tillman’s talent and were inspired to get a Bulldog of their own.</p>
+            <p class="p">
+                It wasn’t long before the adorable puppy was performing all kinds of tricks, surfing, playing football
+                and, of course, skating.
+            </p>
+            <p class="p">One day, when Luciana and Otto were playing together, she saw her dog skateboarding towards her
+                so fast that she had to open her legs for him to speed through without hitting her.</p>
+            <p class="p">This is how Luciana first conjured up the idea to attempt the human tunnel record.</p>
+            <p class="p">Interestingly, Otto is not the only skateboarding Bulldog in his family – he also lives with
+                his best friend Lola, and they do everything together.</p>
+            <p class="p">Luciana and Robert told Guinness World Records they are incredibly grateful for all the
+                wonderful friends they have made through their extraordinary Otto.</p>
+        </div>
+        <div>
+            <img src="https://www.guinnessworldrecords.com/Images/Otto-certificate-presentation_tcm25-475888.jpg"
+                alt="otto's picture" class="image">
+        </div>
+        <div>
+            <h2>Becoming famous</h2>
+            <p class="p">In fact, Otto has made quite a few friends of his own since his record-breaking triumph,
+                boasting a <a href="https://www.facebook.com/OttoBulldogSkater/" target="_blank">Facebook page</a>
+                that has amassed over 80,000 likes.</p>
+            <p class="p">In December 2015, as a result of his Guinness World Records attempt, Otto was even nominated
+                for the World Dog Awards in the 'Hot Dog' of the year category.</p>
+            <p class="p">Peruvian news site <a href="https://elcomercio.pe/wuf/noticias/otto-favorito-gano-391078"
+                    target="_blank">El Comercio</a> caught up with Luciana in January 2016: "We never thought all this
+                would happen," she said.</p>
+            <p class="p">She explains that Otto’s skateboarding skills developed naturally – he never saw anyone skating
+                and he was never given incentives like food.</p>
+        </div>
+        <div>
+            <h2>What has Otto been doing since?</h2>
+            <p class="p">Since becoming a Guinness World Records title holder, Otto has used his talent and worldwide
+                fame to raise awareness of responsible pet ownership and support organisations that promote adopting
+                homeless animals.</p>
+            <p class="p">Otto has also got involved with charities that support disadvantaged people and visited
+                children with cancer, and continues to impress people with his amazing record-breaking talents.</p>
+            <p class="p">He has also recently featured in an advert for a Swiss high-visibility clothing brand, in which
+                he shows off his skills on a skateboard with glowing wheels.</p>
+
+        </div>
+
+
+        <div class="row">
+            <!-- 25% -->
+            <div class="col-3">
+                <br>
+                <br></div>
+            <!-- 75% -->
+            <div class="col-9">
+                <div class="grid-container">
+                    <div>Donate</div>
+                    <div>More Information</div>
+                    <div>Tech Support</div>
+                    <div>HELP</div>
+
+                </div>
+            </div>
+
+        </div>
+
+
+
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>

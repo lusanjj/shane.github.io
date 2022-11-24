@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>lab04</title>
+  <script>
+    //problem 1: this is the function that prints out the attributes that tester entered. ex: names and phone number, etc
+    function submitName() {
+      var x = document.getElementById("name").value;
+      if (x == "" || !isNaN(x)) {
+        alert('Please enter your name correctly !');
+      } else
+        document.getElementById("display_Name").innerHTML = x;
+
+    }
+
+    function submitPhoneNum() {
+      var x = document.getElementById("phoneNumber").value;
+
+      console.log(x);
+
+      console.log(x.length);
+
+      if (isNaN(x) || x.length !== 10) {
+        alert('Please enter your phone number correctly ! Your phone number should be 10 digits');
+      } else
+        document.getElementById('phoneNumber').addEventListener('blur', function (e) {
+          var x = e.target.value.replace(/\D/g, '').match(/^(\d{3})(\d{3})(\d{4})$/);
+          e.target.value = '(' + x[1] + ') ' + x[2] + '-' + x[3];
+          const new_x = x;
+
+        });
+      document.getElementById("display_Phone").innerHTML = x;
+
+    }
+
+    function submitAddress() {
+
+
+      var x = document.getElementById("address").value;
+
+      document.getElementById("display_Address").innerHTML = x;
+
+
+    }
+
+    function countChars(countfrom, displayto) {
+      var len = document.getElementById(countfrom).value.length;
+      document.getElementById(displayto).innerHTML = len;
+    }
+
+    function wordCounter(field, countfield, maxlimit) {
+      wordcounter = 0;
+
+      for (x = 0; x < field.value.length; x++) {
+        if (field.value.charAt(x) == " " && field.value.charAt(x - 1) != " ") {
+          wordcounter++
+        } 
+
+        if (wordcounter > 250) {
+          field.value = field.value.substring(0, x);
+        } else {
+          countfield.value = maxlimit - wordcounter;
+        }
+      }
+
+    }
+
+
+
+function showWeb() {
+  document.getElementById("https").innerHTML = "https: https://www.amazon.ca/";
+  document.getElementById("http").innerHTML = "http: http://www.alibaba.com/";
+}
+
+    
+  </script>
+</head>
+
+<body>
+  <div>
+    <h1>Personal Informations</h1>
+    <!--name-->
+    <div>
+      <p>Please enter your name</p>
+      <div><input id="name" type="text" placeholder="eg: Harry Potter"></div>
+      <button type="button" onclick="submitName()">submit</button>
+    </div>
+
+    <!--phone number-->
+    <div>
+      <p>Please enter your phone number</p>
+
+      <div><input id="phoneNumber" type="tel" placeholder="(xxx)-xxx-xxxx"></div>
+
+      <button type="button" onclick="submitPhoneNum()">submit</button>
+    </div>
+    <!--Address-->
+    <div>
+      <p>Please enter your home address</p>
+
+      <div><input id="address" type="text" placeholder="ex:Hogwards School"></div>
+
+      <button type="button" onclick="submitAddress()">submit</button>
+    </div>
+    <br>
+    <H2>Information output:</H2>
+    <!-- display the personal information -->
+    <div>
+      <label>Name: <t id="display_Name"></t></label> <br />
+      <label>Phone: <t id="display_Phone"> </t> </label> <br />
+      <label>Address: <t id="display_Address"> </t> </label> <br />
+
+    </div>
+    <!-- Char box -->
+    <div>
+      <h2>This is a text box that can count characters</h2>
+      <textarea id="data" cols="40" rows="5" onkeyup="countChars('data','charcount');"
+        onkeydown="countChars('data','charcount');" onmouseout="countChars('data','charcount');"></textarea>
+
+      <br>
+      <p><span id="charcount">0</span> characters entered.</p>
+    </div>
+
+    <!-- Bookmark -->
+
+    <h2>Display two websites which has http and https</h2>
+    <button  onclick="showWeb()">click me to display </button>
+    <br>
+    <img src="favicon.ico" >
+     <span  id="https">This is https website.</span> 
+     <br>
+     <img src="favicon.ico" >
+    <span id="http">This is http website.</span>
+
+
+  </div>
+</body>
+
+</html>

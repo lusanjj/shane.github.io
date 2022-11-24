@@ -1,0 +1,79 @@
+
+
+
+
+/*
+
+● class
+● id
+● box model: margin, padding, border
+● hover - invoke a noticeable action for a set or single html element
+● target (optional - not in the course slides)
+● layout with float, grid, or flexbox (not needed to use all)
+● use both absolute and relative units
+● show and hide element (display or visibility properties)
+● layering (z-index)
+● other css features are allowed
+
+*/
+
+
+
+
+p.colorSet{
+    
+    color: antiquewhite;
+
+}
+
+.fontSize{
+    font-size: 20px;
+}
+
+#text{              /* id */
+    color:rgb(206, 89, 43);
+    font-size: 40px;
+}
+
+.background{
+    width: max-content;
+    position: absolute;
+    opacity:0.3;
+
+    z-index: -1;
+
+}
+
+.boxModel{
+        background-color: aquamarine;
+        width: 200px;
+        height: 200PX;
+        border: 10px solid rgb(53, 72, 85);
+        padding: 1%;         /* relative units absolute and relative units*/
+        margin: 10px;       /* absolute units*/
+      
+}
+
+.click:hover{
+    background-color: gold;
+}
+
+h4.visibleV {
+    visibility: visible;
+  }
+  
+h4.hiddenV {
+    visibility: hidden;
+  }
+
+.fl{
+    float: left;        /* Make my pic to the left*/
+}
+
+.flexbox1{
+    flex-direction: column;
+}
+.tar:target {
+    display: block;
+    
+  }

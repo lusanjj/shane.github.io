@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Lab05 Potato Head</title>
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<link rel="shortcut icon" href="favicon.ico" />
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+<script src="jquery.ui.touch-punch.min.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+html, body {
+	font-size: 16px;
+	text-align: center;
+	background-attachment: fixed;
+}
+#mainParts {
+	height: auto;
+     	width: 800px;
+     	margin: 10px auto;
+     	background: white;
+     	padding: 1px;
+     	box-shadow: 0 0 10px rgba(0,0,0,.1);
+     	border-radius: 17px;
+}
+.parts {
+	cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+     #main {
+         width: 350px;
+    }
+}
+.zoom {
+  padding: 100px;
+  transition: transform .2s;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(2.3); 
+}
+
+
+</style>
+<script>
+    //This is to allow user to drag the body parts of the Mr.potato
+$(function () {
+    $(".parts").draggable()
+
+});
+
+
+
+
+
+
+</script>
+</head>
+
+<body>
+    
+    <!-- This part is tester should do the drag and drop -->
+<div id="mainParts">
+    <br>
+    <br>
+
+    <h3>Please help and fix Mr.Potato by drag and drop!</h3>
+    <br>
+    <br>
+    <!-- This is the body that cannot be moved by the tester! -->
+    <div>
+    <img src="Body.png" ></img>
+    </div>
+
+    <!-- These are the parts that can be moved by the tester -->
+
+    <div>
+    <img class="parts " src="Ears.png"></img>
+    <img class="parts " src="Eyebrows.png"></img>
+   
+    <img class="parts " src="Eyes.png"></img>
+    <img class="parts " src="Hat.png"></img>
+    <img class="parts " src="Mouth.png"></img>
+    
+    <img class="parts " src="Mustache.png"></img>
+    <img class="parts " src="Nose.png"></img>
+    </div>
+    <!-- here is a demo for the tester -->
+    <div>
+        <h1>Hello! I am Mr.Potato !</h1>
+        <img src="potato-head.jpg" class="zoom" height="300"></img>
+    </div>
+
+    <br>
+    <br>
+</div>
+</body>
+</html>
